@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Personal Data Form</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #2c2ccf; 
+      color: white;
+    }
+
+    .form-container {
+      width: 80%;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    .header {
+      background-color: red;
+      padding: 10px;
+      text-align: left;
+      font-weight: bold;
+    }
+
+    fieldset {
+      border: none;
+      margin: 20px 0;
+    }
+
+    label {
+      display: inline-block;
+      width: 120px;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select {
+      padding: 5px;
+      width: 200px;
+      margin-bottom: 10px;
+    }
+
+    select[multiple] {
+      height: 100px;
+    }
+
+    .submit-btn {
+      background-color: red;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <div class="header">Personal Data</div>
+
+    <fieldset>
+      <legend><b>Your Name</b></legend>
+      <label>FirstName :</label>
+      <input type="text" placeholder="ex: omar"><br>
+      <label>LastName :</label>
+      <input type="text" placeholder="ex: mokhtar">
+    </fieldset>
+
+    <fieldset>
+      <label>Your-Phone :</label>
+      <input type="text"><br>
+      <label>Email :</label>
+      <input type="email"><br>
+      <label>Password :</label>
+      <input type="password"><br>
+      <label>Re-Password :</label>
+      <input type="password">
+    </fieldset>
+
+    <fieldset>
+      <label>Select City:</label><br>
+      <select multiple>
+        <optgroup label="Egypt">
+          <option>Cairo</option>
+          <option>Alexandria</option>
+          <option>Mansoura</option>
+        </optgroup>
+        <optgroup label="UAE">
+          <option>Abu Dhabi</option>
+          <option>Ajman</option>
+          <option>Sharjah</option>
+        </optgroup>
+        <optgroup label="Saudi Arabia">
+          <option>Riyadh</option>
+          <option>Jeddah</option>
+          <option>Dammam</option>
+        </optgroup>
+      </select><br><br>
+
+      <select>
+        <option>Cairo</option>
+        <option>Alexandria</option>
+        <option>Mansoura</option>
+      </select>
+    </fieldset>
+
+    <button class="submit-btn">SUBMIT</button>
+  </div>
+
+</body>
+</html>
