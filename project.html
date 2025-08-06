@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Work Card</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    /* Reset بعض الإعدادات */
+*{ margin:0;padding:0;box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{ font-family: Arial, sans-serif; }
+
+/* Common section style */
+.section {
+  position: relative;
+  height: 100vh;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align:center;
+}
+.btn-scroll {
+  position: absolute;
+  bottom:20px;
+  font-size:2rem;
+  color:#fff;
+  text-decoration:none;
+}
+
+/* Header */
+.header {
+  background: url('header-bg.jpg') center/cover no-repeat;
+  color: white;
+}
+.header .overlay {
+  position:absolute; top:0;left:0;width:100%;height:100%;
+  background: rgba(0,0,0,0.6);
+}
+.header .header-content {
+  position:relative;
+  z-index:1;
+}
+.header h1{ font-size:3rem; margin-bottom:10px; }
+.header p{ font-size:1.2rem; }
+
+/* About */
+.about { background:#fff; color:#333; }
+.container.about-content {
+  display:flex; align-items:center; max-width:900px; padding:20px;
+}
+.about-img {
+  width:150px; border-radius:8px; margin-right:30px;
+}
+.about-text h2 { margin-bottom:15px; font-size:2rem; }
+.about-text p { margin-bottom:20px; }
+.skill{ margin-bottom:10px; }
+.skill span{ display:block; margin-bottom:5px; font-weight:bold; }
+.skill-bar{
+  height:8px; background:#ddd; border-radius:4px; overflow:hidden;
+}
+.skill-bar div{
+  height:100%; background:#2196f3;
+}
+
+/* Services */
+.services {
+  background:#f9f9f9; color:#333;
+}
+.services h2{ font-size:2rem; margin-bottom:20px; }
+.service-grid {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px; max-width:900px; margin:0 auto;
+}
+.service-box {
+  background:#fff; padding:20px; border-radius:8px;
+  box-shadow:0 0 8px rgba(0,0,0,0.1);
+}
+.service-box h3{ margin-bottom:10px; }
+.service-box p{ font-size:1rem; }
+
+/* Counters */
+.counters { background:#2196f3; color:#fff; flex-direction:row; }
+.counter { flex:1; }
+.counter h3{ font-size:3rem; margin-bottom:10px; }
+.counter p{ font-size:1.2rem; }
+
+/* Portfolio */
+.portfolio { background:#fff; color:#000; }
+.portfolio-grid {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:15px; max-width:1000px; margin:0 auto;
+}
+.portfolio-grid .item img {
+  width:100%; height:auto; display:block; border-radius:6px;
+}
+
+/* Blog */
+.blog { background:#f2f6ff; color:#333; }
+.blog-grid {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:15px; max-width:900px; margin:0 auto;
+}
+.blog-grid .post img {
+  width:100%; border-radius:6px;
+}
+.blog-grid .post h4 { margin-top:10px; }
+
+/* Contact */
+.contact { background:#fff; color:#333; padding:40px 20px; }
+.container.contact-content {
+  display:flex; flex-wrap:wrap; max-width:900px; margin:0 auto;
+}
+.contact-form, .contact-info {
+  flex:1; min-width:280px; margin:10px;
+}
+.contact-form input, .contact-form textarea {
+  width:100%; padding:10px; margin-bottom:10px; border:1px solid #ccc;
+  border-radius:5px;
+}
+.contact-form button {
+  padding:10px 20px; background:#2196f3; color:#fff;
+  border:none; border-radius:5px; cursor:pointer;
+}
+
+/* Footer */
+.footer {
+  padding:20px; background:#333; color:#fff; text-align:center;
+}
+    
+  </style>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Full-Screen</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="section header" id="home">
+    <div class="overlay"></div>
+    <div class="header-content">
+      <h1>I am Morgan Freeman</h1>
+      <p>Freelancer</p>
+      <a href="#about" class="btn-scroll">↓</a>
+    </div>
+  </header>
+
+  <section class="section about" id="about">
+    <div class="container about-content">
+      <img src="profile.jpg" alt="Profile" class="about-img">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>Short intro about your experience and background...</p>
+        <div class="skill">
+          <span>HTML</span>
+          <div class="skill-bar"><div style="width:90%;"></div></div>
+        </div>
+        <div class="skill">
+          <span>CSS</span>
+          <div class="skill-bar"><div style="width:80%;"></div></div>
+        </div>
+        <div class="skill">
+          <span>JavaScript</span>
+          <div class="skill-bar"><div style="width:75%;"></div></div>
+        </div>
+      </div>
+    </div>
+    <a href="#services" class="btn-scroll">↓</a>
+  </section>
+
+  <section class="section services" id="services">
+    <h2>Services</h2>
+    <div class="service-grid">
+      <div class="service-box"><h3>Web Design</h3><p>Modern & responsive</p></div>
+      <div class="service-box"><h3>UI/UX</h3><p>User‑centered design</p></div>
+      <div class="service-box"><h3>Mobile Apps</h3><p>iOS & Android</p></div>
+      <div class="service-box"><h3>Branding</h3><p>Visual identity</p></div>
+      <div class="service-box"><h3>SEO</h3><p>Boost visibility</p></div>
+      <div class="service-box"><h3>eCommerce</h3><p>Online stores</p></div>
+    </div>
+    <a href="#counters" class="btn-scroll">↓</a>
+  </section>
+
+  <section class="section counters" id="counters">
+    <div class="counter"><h3>450+</h3><p>Projects</p></div>
+    <div class="counter"><h3>12</h3><p>Years Experience</p></div>
+    <div class="counter"><h3>75</h3><p>Clients</p></div>
+    <a href="#portfolio" class="btn-scroll">↓</a>
+  </section>
+
+  <section class="section portfolio" id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="portfolio-grid">
+      <div class="item"><img src="work1.jpg" alt=""></div>
+      <div class="item"><img src="work2.jpg" alt=""></div>
+      <div class="item"><img src="work3.jpg" alt=""></div>
+      <div class="item"><img src="work4.jpg" alt=""></div>
+      <div class="item"><img src="work5.jpg" alt=""></div>
+      <div class="item"><img src="work6.jpg" alt=""></div>
+    </div>
+    <a href="#blog" class="btn-scroll">↓</a>
+  </section>
+
+  <section class="section blog" id="blog">
+    <h2>Blog</h2>
+    <div class="blog-grid">
+      <div class="post"><img src="blog1.jpg" alt=""><h4>Article 1</h4></div>
+      <div class="post"><img src="blog2.jpg" alt=""><h4>Article 2</h4></div>
+      <div class="post"><img src="blog3.jpg" alt=""><h4>Article 3</h4></div>
+    </div>
+    <a href="#contact" class="btn-scroll">↓</a>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="container contact-content">
+      <div class="contact-form">
+        <h2>Send Message Us</h2>
+        <form>
+          <input type="text" placeholder="Your Name" /><br />
+          <input type="email" placeholder="Your Email" /><br />
+          <textarea placeholder="Your Message"></textarea><br />
+          <button type="submit">Send</button>
+        </form>
+      </div>
+      <div class="contact-info">
+        <h2>Get in touch</h2>
+        <p>Address line</p>
+        <p>Email: info@example.com</p>
+        <p>Phone: +123 456 7890</p>
+      </div>
+    </div>
+    <a href="#home" class="btn-scroll">↑</a>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Morgan Freeman | All rights reserved</p>
+  </footer>
+
+</body>
+</html>
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
